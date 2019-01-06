@@ -1,0 +1,16 @@
+{% extends 'base.html.twig'  %}
+
+{% block body  %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Este es el Blog de Prueba</h1>
+        <p>Aquí encontrarás las sentencias de código de prueba</p>
+        {% if is_granted('ROLE_SUPER_ADMIN')  %}
+            
+            <p>Eres SUPER USUARIO</p>
+            
+        {% endif %}
+    </div>
+
+{% endblock  %}
